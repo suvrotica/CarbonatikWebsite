@@ -1,4 +1,9 @@
 
+<script lang="ts">
+    import Hero from "$lib/Hero.svelte";
+</script>
+
+<Hero/>    
 
   <main class="container mx-auto mt-8">
     <section id="home" class="mb-12">
