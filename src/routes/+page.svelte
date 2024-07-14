@@ -1,8 +1,16 @@
 
 <script lang="ts">
     import Hero from "$lib/Hero.svelte";
-</script>
 
+    let isFontLoaded = $state(false);
+  </script>
+  
+  <p class="noto" style="font-size: 24px;">
+    This text should be in Noto Sans Variable
+  </p>
+  <p style="font-family: Arial, sans-serif; font-size: 24px;">
+    This text is in Arial for comparison
+  </p>
 <Hero/>    
 
   <main class="container mx-auto mt-8">
