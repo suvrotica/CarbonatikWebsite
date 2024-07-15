@@ -70,7 +70,7 @@
     .hero_container,
     .hero_container_content,
     .hero_container_media {
-      @apply shadow-lg shadow-neutral-200 dark:shadow-neutral-950;
+      @apply padmar shadow-lg shadow-neutral-200 dark:shadow-neutral-950;
     }
   
     h1 {
