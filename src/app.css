@@ -154,7 +154,7 @@
     }
   
     img {
-      @apply h-full rounded-lg md:h-96;
+      @apply h-full rounded-lg object-cover object-top md:h-96;
     }
   
     .span_underlined {
@@ -165,9 +165,7 @@
       @apply text-[#D4AF47];
     }
   
-    .imgPhoto {
-      @apply h-full rounded-lg object-cover object-top md:h-96;
-    }
+    
   
     blockquote {
       @apply border-l-4 border-neutral-400 pl-4 text-2xl;
