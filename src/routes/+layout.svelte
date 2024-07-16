@@ -1,13 +1,20 @@
 <script lang="ts">
+	import '../app.css'; // Keep this import for CSS processing
 	import Nav from '$lib/Nav.svelte';
 	import FontPreload from '$lib/FontPreload.svelte';
 	import { seo, config, jsonLd, socialMeta } from '$lib/global';
+	import { onMount } from 'svelte';
+
+	let mounted = false;
+
+	onMount(() => {
+		mounted = true;
+	});
 </script>
 
 <svelte:head>
 	<meta charset="utf-8" />
 	<title>{seo.title}</title>
-	<link rel="icon" href="%sveltekit.assets%/fav-icon.png" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="description" content={seo.description} />
 	<meta name="keywords" content={seo.keywords} />
@@ -26,10 +33,14 @@
 	<meta name="twitter:image" content={config.logoUrl} />
 
 	<script type="application/ld+json">
-    {JSON.stringify(jsonLd)}
+	  {JSON.stringify(jsonLd)}
 	</script>
 
-	<link rel="stylesheet" href="../app.css" />
+	{#if mounted}
+		<style>
+			@import url('/app.css');
+		</style>
+	{/if}
 </svelte:head>
 
 <FontPreload href="/Fonts/Noto/NotoSans-VariableFont_wdth,wght.ttf" crossorigin="anonymous" />
@@ -37,6 +48,5 @@
 	href="/Fonts/Noto/NotoSans-Italic-VariableFont_wdth,wght.ttf"
 	crossorigin="anonymous"
 />
-
 <Nav />
 <slot />
