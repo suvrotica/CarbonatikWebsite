@@ -2,7 +2,6 @@
 	import Nav from '$lib/Nav.svelte';
 	import FontPreload from '$lib/FontPreload.svelte';
 	import { seo, config, jsonLd, socialMeta } from '$lib/global';
-	import '../app.css';
 </script>
 
 <svelte:head>
