@@ -69,6 +69,7 @@ export const jsonLd = {
     "inLanguage": "en-US"
 };
 
+
 // Mining Operations
 export const miningOperations = {
     graphite: {
