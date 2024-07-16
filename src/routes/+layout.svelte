@@ -38,7 +38,7 @@
 
 	{#if mounted}
 		<style>
-			@import url('/app.css');
+			@import url('../app.css');
 		</style>
 	{/if}
 </svelte:head>
