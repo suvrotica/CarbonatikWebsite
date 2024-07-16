@@ -1,16 +1,18 @@
 <script lang="ts">
-	import '../app.css';
 	import Nav from '$lib/Nav.svelte';
 	import FontPreload from '$lib/FontPreload.svelte';
 	import { seo, config, jsonLd, socialMeta } from '$lib/global';
+	import '../app.css';
 </script>
 
 <svelte:head>
 	<meta charset="utf-8" />
 	<title>{seo.title}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="description" content={seo.description} />
 	<meta name="keywords" content={seo.keywords} />
 	<link rel="canonical" href={config.siteUrl} />
+	<link rel="icon" href="./fav-icon.png" />
 
 	<meta property="og:title" content={socialMeta.ogTitle} />
 	<meta property="og:description" content={socialMeta.ogDescription} />
@@ -24,8 +26,10 @@
 	<meta name="twitter:image" content={config.logoUrl} />
 
 	<script type="application/ld+json">
-      {JSON.stringify(jsonLd)}
+    {JSON.stringify(jsonLd)}
 	</script>
+
+	<link rel="stylesheet" href="/app.css" />
 </svelte:head>
 
 <FontPreload href="/Fonts/Noto/NotoSans-VariableFont_wdth,wght.ttf" crossorigin="anonymous" />
