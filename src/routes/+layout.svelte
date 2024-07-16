@@ -1,8 +1,9 @@
 <script lang="ts">
 	import '../app.css';
+	import { seo, config, socialMeta } from '$lib/global';
 	import Nav from '$lib/Nav.svelte';
 	import FontPreload from '$lib/FontPreload.svelte';
-	import { seo, config, jsonLd, socialMeta } from '$lib/global';
+	import type { LayoutData } from './$types';
 </script>
 
 <svelte:head>
@@ -24,9 +25,8 @@
 	<meta name="twitter:title" content={socialMeta.twitterTitle} />
 	<meta name="twitter:description" content={socialMeta.twitterDescription} />
 	<meta name="twitter:image" content={config.logoUrl} />
-
 	<script type="application/ld+json">
-	  {JSON.stringify(jsonLd)}
+		{stringifiedJsonLd}
 	</script>
 </svelte:head>
 

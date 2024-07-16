@@ -69,6 +69,7 @@ export const jsonLd = {
     "inLanguage": "en-US"
 };
 
+export const stringifiedJsonLd = JSON.stringify(jsonLd);
 
 // Mining Operations
 export const miningOperations = {
