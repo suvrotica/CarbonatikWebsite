@@ -11,7 +11,6 @@
 	crossorigin="anonymous"
 />
 <svelte:head>
-	<link rel="icon" href="https://fav.farm/🪫" />
 	<title>{seo.title}</title>
 	<meta name="description" content={seo.description} />
 	<meta property="og:title" content={seo.title} />
