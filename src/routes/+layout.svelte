@@ -5,11 +5,6 @@
 	import { seo, config, jsonLd, socialMeta } from '$lib/global';
 </script>
 
-<FontPreload href="/Fonts/Noto/NotoSans-VariableFont_wdth,wght.ttf" crossorigin="anonymous" />
-<FontPreload
-	href="/Fonts/Noto/NotoSans-Italic-VariableFont_wdth,wght.ttf"
-	crossorigin="anonymous"
-/>
 <svelte:head>
 	<title>{seo.title}</title>
 	<meta name="description" content={seo.description} />
@@ -31,5 +26,11 @@
       {JSON.stringify(jsonLd)}
 	</script>
 </svelte:head>
+
+<FontPreload href="/Fonts/Noto/NotoSans-VariableFont_wdth,wght.ttf" crossorigin="anonymous" />
+<FontPreload
+	href="/Fonts/Noto/NotoSans-Italic-VariableFont_wdth,wght.ttf"
+	crossorigin="anonymous"
+/>
 <Nav />
 <slot />
