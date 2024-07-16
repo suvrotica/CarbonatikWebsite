@@ -1,6 +1,8 @@
 <script lang="ts">
 	import '../app.css';
 	import Nav from '$lib/Nav.svelte';
+	import Footer from '$lib/Footer.svelte';
+	import Divider from '$lib/Divider.svelte';
 	import FontPreload from '$lib/FontPreload.svelte';
 </script>
 
@@ -10,4 +12,7 @@
 	crossorigin="anonymous"
 />
 <Nav />
+<Divider icon={false} />
 <slot />
+<Divider icon={false} />
+<Footer />
