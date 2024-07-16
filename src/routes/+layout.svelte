@@ -8,6 +8,7 @@
 <svelte:head>
 	<meta charset="utf-8" />
 	<title>{seo.title}</title>
+	<link rel="icon" href="%sveltekit.assets%/fav-icon.png" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="description" content={seo.description} />
 	<meta name="keywords" content={seo.keywords} />
@@ -29,7 +30,7 @@
     {JSON.stringify(jsonLd)}
 	</script>
 
-	<link rel="stylesheet" href="/app.css" />
+	<link rel="stylesheet" href="../app.css" />
 </svelte:head>
 
 <FontPreload href="/Fonts/Noto/NotoSans-VariableFont_wdth,wght.ttf" crossorigin="anonymous" />
@@ -37,5 +38,6 @@
 	href="/Fonts/Noto/NotoSans-Italic-VariableFont_wdth,wght.ttf"
 	crossorigin="anonymous"
 />
+
 <Nav />
 <slot />
