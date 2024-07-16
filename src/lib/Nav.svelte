@@ -1,16 +1,33 @@
 <script>
-    let navItems = $state([
-      { href: '#about', text: 'About Us' },
-      { href: '#operations', text: 'Our Operations' },
-      { href: '#investor-relations', text: 'Investor Relations' },
-      { href: '#contact', text: 'Contact' }
-    ]);
-  </script>
-  
-  <nav class="bg-graphite text-white p-4 border border-black">
-    <ul class="flex space-x-4">
-      {#each navItems as item}
-        <li><a href={item.href} class="hover:text-goldmica">{item.text}</a></li>
-      {/each}
-    </ul>
-  </nav>
+	import { base } from '$app/paths';
+
+	let isOpen = $state(false);
+	let navItems = $state([
+		{ href: '#about', text: 'About' },
+		{ href: '#operations', text: 'Operations' },
+		{ href: '#investor-relations', text: 'Investors' },
+		{ href: '#contact', text: 'Contact' }
+	]);
+
+	function toggleMenu() {
+		isOpen = !isOpen;
+	}
+</script>
+
+<nav class="nav-container">
+	<div class="nav-content">
+		<a href="/" class="nav-logo">
+			<img src="{base}/logo.png" alt="Carbonatik Logo" />
+		</a>
+		<div class="nav-menu-toggle">
+			<button onclick={toggleMenu} aria-label="Toggle menu"> &#9776; </button>
+		</div>
+		<ul class="nav-links" class:open={isOpen}>
+			{#each navItems as item}
+				<li>
+					<a href={item.href}>{item.text}</a>
+				</li>
+			{/each}
+		</ul>
+	</div>
+</nav>

@@ -3,171 +3,194 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Noto Sans Variable';
-    src: url('/Fonts/Noto/NotoSans-VariableFont_wdth,wght.ttf') format('truetype-variations');
-    font-weight: 100 900;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: 'Noto Sans Variable';
-    src: url('/Fonts/Noto/NotoSans-Italic-VariableFont_wdth,wght.ttf') format('truetype-variations');
-    font-weight: 100 900;
-    font-style: italic;
+  font-family: 'Noto Sans Variable';
+  src: url('/Fonts/Noto/NotoSans-VariableFont_wdth,wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans Variable';
+  src: url('/Fonts/Noto/NotoSans-Italic-VariableFont_wdth,wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+@layer utilities {
+  .padmar {
+    @apply p-1 m-1;
   }
 
-  @layer utilities {
-    .padmar {
-      @apply p-1 m-1;
-    }
-  
-    .noto {
-      font-family: 'Noto Sans Variable', sans-serif;
-    }
-  
-    .textStyle {
-      @apply noto padmar text-base md:text-lg leading-tight tracking-tighter text-neutral-900 antialiased dark:text-neutral-100;
-    }
-  
-    .radialDark {
-      background: radial-gradient(#333, #000);
-    }
-  
-    .radialLight {
-      background: radial-gradient(#bbb, #fff);
-    }
+  .noto {
+    font-family: 'Noto Sans Variable', sans-serif;
   }
-  
-  @layer base {
-    body {
-      @apply padmar radialLight dark:radialDark text-neutral-950 dark:text-neutral-100 text-center;
-    }
-  
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    blockquote {
-      @apply textStyle font-thin tracking-wider;
-    }
-  
-    p {
-      @apply textStyle text-justify font-extralight dark:font-thin tracking-tighter;
-    }
-  
-    figcaption {
-      @apply textStyle font-thin;
-    }
-  
-    img,
-    figure,
-    footer,
-    article,
-    section,
-    header,
-    nav,
-    .hero_container,
-    .hero_container_content,
-    .hero_container_media {
-      @apply padmar shadow-lg shadow-neutral-200 dark:shadow-neutral-950;
-    }
-  
-    h1 {
-      @apply text-6xl md:text-7xl;
-    }
-  
-    h2 {
-      @apply text-5xl md:text-6xl;
-    }
-  
-    h3 {
-      @apply text-4xl md:text-5xl;
-    }
-  
-    h4 {
-      @apply text-3xl md:text-4xl;
-    }
-  
-    h5 {
-      @apply text-2xl md:text-3xl;
-    }
-  
-    h6 {
-      @apply text-xl md:text-2xl;
-    }
-  
-    .hero_container {
-      @apply flex flex-col-reverse gap-2 md:grid md:grid-cols-12;
-    }
-  
-    .hero_container_content,
-    .hero_container_media {
-      @apply m-4;
-    }
-  
-    .hero_container_media {
-      @apply snap-center justify-center overflow-hidden object-center;
-    }
-  
-    footer,
-    article,
-    section,
-    header,
-    nav,
-    .hero_container {
-      @apply bg-neutral-100 dark:bg-neutral-900;
-    }
-  
-    footer {
-      @apply flex flex-col items-center justify-center;
-    }
-  
-    nav {
-      @apply flex items-center justify-between;
-    }
-  
-    section {
-      @apply md:grid md:grid-cols-3;
-    }
-  
-    article {
-      @apply md:col-span-2;
-    }
-  
-    figure {
-      @apply flex flex-col items-center;
-    }
-  
-    hr {
-      @apply my-4 border-none;
-    }
+
+  .textStyle {
+    @apply noto padmar text-base md:text-lg leading-tight tracking-tighter text-neutral-900 antialiased dark:text-neutral-100;
   }
-  
-  @layer components {
-    .hamburger {
-      @apply inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-neutral-500 hover:bg-neutral-200 focus:outline-none focus:ring-2 focus:ring-neutral-300 md:hidden dark:text-neutral-400 dark:hover:bg-neutral-600 dark:focus:ring-neutral-500;
-    }
-  
-    ul li a {
-      @apply block rounded bg-neutral-300 py-0 pl-3 pr-4 text-base text-neutral-950 hover:bg-neutral-400 md:bg-transparent md:text-neutral-600 md:hover:bg-transparent md:hover:text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200 dark:hover:bg-neutral-600 dark:hover:text-neutral-300;
-    }
-  
-    img {
-      @apply h-full rounded-lg object-cover object-top md:h-96;
-    }
-  
-    .span_underlined {
-      @apply text-2xl underline decoration-neutral-400 decoration-8 underline-offset-4;
-    }
-  
-    .gold {
-      @apply text-[#D4AF47];
-    }
-  
-    
-  
-    blockquote {
-      @apply border-l-4 border-neutral-400 pl-4 text-2xl;
-    }
+
+  .radialDark {
+    background: radial-gradient(#333, #000);
   }
+
+  .radialLight {
+    background: radial-gradient(#bbb, #fff);
+  }
+}
+
+@layer base {
+  body {
+    @apply padmar radialLight dark:radialDark text-neutral-950 dark:text-neutral-100 text-center;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  blockquote {
+    @apply textStyle font-thin tracking-wider;
+  }
+
+  p {
+    @apply textStyle text-justify font-extralight dark:font-thin tracking-tighter;
+  }
+
+  figcaption {
+    @apply textStyle font-thin;
+  }
+
+  img,
+  figure,
+  footer,
+  article,
+  section,
+  header,
+  nav,
+  .hero_container,
+  .hero_container_content,
+  .hero_container_media {
+    @apply padmar shadow-lg shadow-neutral-200 dark:shadow-neutral-950;
+  }
+
+  h1 {
+    @apply text-6xl md:text-7xl;
+  }
+
+  h2 {
+    @apply text-5xl md:text-6xl;
+  }
+
+  h3 {
+    @apply text-4xl md:text-5xl;
+  }
+
+  h4 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h5 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  h6 {
+    @apply text-xl md:text-2xl;
+  }
+
+  .hero_container {
+    @apply flex flex-col-reverse gap-2 md:grid md:grid-cols-12;
+  }
+
+  .hero_container_content,
+  .hero_container_media {
+    @apply m-4;
+  }
+
+  .hero_container_media {
+    @apply snap-center justify-center overflow-hidden object-center;
+  }
+
+  footer,
+  article,
+  section,
+  header,
+  nav,
+  .hero_container {
+    @apply bg-neutral-100 dark:bg-neutral-900;
+  }
+
+  footer {
+    @apply flex flex-col items-center justify-center;
+  }
+
+  section {
+    @apply md:grid md:grid-cols-3;
+  }
+
+  article {
+    @apply md:col-span-2;
+  }
+
+  figure {
+    @apply flex flex-col items-center;
+  }
+
+  hr {
+    @apply my-4 border-none;
+  }
+}
+
+@layer components {
+  img {
+    @apply h-full rounded-lg object-cover object-top md:h-96;
+  }
+
+  .span_underlined {
+    @apply text-2xl underline decoration-neutral-400 decoration-8 underline-offset-4;
+  }
+
+  .gold {
+    @apply text-[#D4AF47];
+  }
+
+  blockquote {
+    @apply border-l-4 border-neutral-400 pl-4 text-2xl;
+  }
+
+  .hamburger {
+    @apply inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-neutral-500 hover:bg-neutral-200 focus:outline-none focus:ring-2 focus:ring-neutral-300 dark:text-neutral-400 dark:hover:bg-neutral-600 dark:focus:ring-neutral-500;
+  }
+
+  .nav-container {
+    @apply padmar flex items-center justify-between bg-neutral-100 dark:bg-neutral-900;
+  }
+
+  .nav-content {
+    @apply container flex items-center justify-between w-full;
+  }
+
+  .nav-logo {
+    @apply noto textStyle text-2xl font-thin tracking-wider;
+  }
+
+  .nav-logo img {
+    @apply h-12 w-auto;
+  }
+
+  .nav-menu-toggle {
+    @apply hidden md:hidden;
+  }
+
+  .nav-menu-toggle button {
+    @apply hamburger noto text-2xl;
+  }
+
+  .nav-links {
+    @apply flex space-x-4;
+  }
+
+  .nav-links li a {
+    @apply textStyle block py-2 px-4 rounded transition duration-300 hover:bg-neutral-200 dark:hover:bg-neutral-700;
+  }
+}
