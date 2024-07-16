@@ -1,15 +1,8 @@
 <script lang="ts">
-	import '../app.css'; // Keep this import for CSS processing
+	import '../app.css';
 	import Nav from '$lib/Nav.svelte';
 	import FontPreload from '$lib/FontPreload.svelte';
 	import { seo, config, jsonLd, socialMeta } from '$lib/global';
-	import { onMount } from 'svelte';
-
-	let mounted = false;
-
-	onMount(() => {
-		mounted = true;
-	});
 </script>
 
 <svelte:head>
@@ -35,12 +28,6 @@
 	<script type="application/ld+json">
 	  {JSON.stringify(jsonLd)}
 	</script>
-
-	{#if mounted}
-		<style>
-			@import url('../app.css');
-		</style>
-	{/if}
 </svelte:head>
 
 <FontPreload href="/Fonts/Noto/NotoSans-VariableFont_wdth,wght.ttf" crossorigin="anonymous" />
