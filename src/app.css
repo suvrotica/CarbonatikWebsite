@@ -294,6 +294,62 @@
     @apply h-5 w-5 text-neutral-500 dark:text-neutral-400;
   }
 
+  .graphite-section {
+    @apply bg-neutral-900 py-24 sm:py-32;
+  }
+
+  .content-wrapper {
+    @apply mx-auto max-w-7xl px-6 lg:px-8;
+  }
+
+  .header-content {
+    @apply mx-auto max-w-3xl text-center;
+  }
+
+  .subtitle {
+    @apply text-xl font-semibold leading-7 text-[#D4AF37];
+  }
+
+  .title {
+    @apply mt-2 text-4xl sm:text-5xl font-bold tracking-tight text-white;
+  }
+
+  .description {
+    @apply mt-6 text-xl leading-8 text-neutral-300;
+  }
+
+  .image-container {
+    @apply relative overflow-hidden mt-16;
+  }
+
+  .image-wrapper {
+    @apply mx-auto max-w-full;
+  }
+
+  .feature-image {
+    @apply w-full h-auto object-cover rounded-xl shadow-2xl;
+  }
+
+  .features-grid {
+    @apply mx-auto mt-16 max-w-2xl grid grid-cols-1 gap-x-8 gap-y-10 text-base leading-7 text-neutral-300 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3;
+  }
+
+  .feature-item {
+    @apply relative pl-12;
+  }
+
+  .feature-title {
+    @apply text-lg font-semibold text-white mb-2 flex items-center;
+  }
+
+  .feature-icon {
+    @apply absolute left-0 top-1 h-8 w-8 text-[#D4AF37];
+  }
+
+  .feature-description {
+    @apply text-base text-neutral-400;
+  }
+
 }
 
 @media (max-width: 768px) {

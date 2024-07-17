@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        gold: '#D4AF37',
         graphite: '#333333',
         goldmica: '#FFD700',
         granite: '#B22222',

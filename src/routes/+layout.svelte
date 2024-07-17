@@ -5,6 +5,7 @@
 	import Footer from '$lib/Footer.svelte';
 	import Divider from '$lib/Divider.svelte';
 	import FontPreload from '$lib/FontPreload.svelte';
+	import Graphite from '$lib/Graphite.svelte';
 </script>
 
 <FontPreload href="/Fonts/Noto/NotoSans-VariableFont_wdth,wght.ttf" crossorigin="anonymous" />
@@ -17,6 +18,9 @@
 <Divider icon={false} />
 <slot />
 <Divider icon={false} />
+<Graphite />
+<Divider icon={false} />
+
 <Privacy />
 <Divider icon={false} />
 
