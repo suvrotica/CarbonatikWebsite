@@ -42,7 +42,7 @@
 					<div>
 						<h3 class="footer-heading">Legal</h3>
 						<ul class="footer-list">
-							<li><a href="#privacy">Privacy Policy</a></li>
+							<li><a href="#privacy-policy" class="footer-link">Privacy Policy</a></li>
 							<li><a href="#terms">Terms of Use</a></li>
 							<li><a href="#compliance">Compliance</a></li>
 						</ul>
