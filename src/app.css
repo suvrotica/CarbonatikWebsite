@@ -144,9 +144,9 @@
 
   img {
     @apply float-left rounded-lg object-cover object-center mr-4 mb-4;
-    width: 50vw !important;
-    height: auto !important;
-    max-height: 50vh !important;
+    width: 50vw ;
+    height: auto ;
+    max-height: 50vh ;
   }
 
   /* Clear float after the image */
@@ -159,7 +159,7 @@
   /* Responsive adjustments */
   @screen sm {
     img {
-      max-width: 50vw !important;
+      max-width: 50vw ;
     }
   }
 
