@@ -143,8 +143,33 @@
   }
 
   img {
-    @apply h-full rounded-lg object-cover object-top md:h-96;
+    @apply float-left rounded-lg object-cover object-center mr-4 mb-4;
+    width: 50vw !important;
+    height: auto !important;
+    max-height: 50vh !important;
   }
+
+  /* Clear float after the image */
+  img + h2,
+  img + h3 {
+    clear: both;
+    padding-top: 1rem;
+  }
+
+  /* Responsive adjustments */
+  @screen sm {
+    img {
+      max-width: 50vw !important;
+    }
+  }
+
+  /* Ensure content after the image starts on a new line */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
 
   .span_underlined {
     @apply text-2xl underline decoration-neutral-400 decoration-8 underline-offset-4;
